@@ -1,0 +1,12 @@
+POSIBLES MEJORAS:
+
+-Crear una clase cuenta que herede de usuario y esta de banco.La clase cuenta 
+ actue de padre de CuentaConComision y CuentaSinComision.
+
+ClaseUsuario
+-Implementar que los usuarios puedan pedir prestamos.
+-Hipotecas.
+
+
+ClaseBanco
+-Permitir endeudamiento del banco. (Con un maximo).

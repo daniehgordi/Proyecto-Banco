@@ -1,7 +1,6 @@
-/*
- * Realizamos una clase principal:
- * Probamos que funcionen las clases
- * 
+/**
+ * CLASE PRINCIPAL
+ * Para probar que el proyecto funciones.
  */
 package com.proyecto.banco;
 

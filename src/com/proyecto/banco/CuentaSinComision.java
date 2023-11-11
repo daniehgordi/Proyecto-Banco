@@ -3,29 +3,28 @@
  * 
  * Hereda de Banco y implementa la interfaz Movimiento
  * 
- * Variables:id, nombretitular, saldoCuenta, estado de la cuenta
+ *  Variables: id, nombreTitular, saldoCuenta,
+ * 	maxCuentaNegativo, estadoCuenta(num)
  * 
  * Es una cuenta que no tiene comisiones de retirada ni de se 
  * le aplican comisiones por saldo negativo. 
  * Con un tope máximo negativo de unos 1000€.
  */
 package com.proyecto.banco;
-
 import com.proyecto.interfazbanco.Movimiento;
 /**
  * @author Daniel Gordillo Guillén
  * @version 1.0
  */
 public class CuentaSinComision extends Banco implements Movimiento{
-	    //Declaramos variables
+	    //VARIABLES
 		private int id;
 	    private String nombreTitular;
 	    private double saldoCuenta = 0d; 
 		private double maxCuentaNegativo = 1000d;
 		private EstadoCuenta estado =EstadoCuenta.OPERATIVA;
 
-	    
-	    //Constructor
+	    //CONSTRUCTOR
 		public CuentaSinComision(String nombreTitular) {
 			super(getNombreBanco());
 			this.nombreTitular = nombreTitular;
@@ -35,7 +34,7 @@ public class CuentaSinComision extends Banco implements Movimiento{
 			this.estado = estado;
 		}
 		
-		//Getter and Setter
+		//GETTER AND SETTER
 		public String getNombreTitular() {
 			System.out.println("El nombre del titular es: ");
 			return nombreTitular;
@@ -68,7 +67,7 @@ public class CuentaSinComision extends Banco implements Movimiento{
 		}
 		
 		/*
-		 * Desarrollamos los metodos de la interfaz:
+		 * DESARROLLO DE LOS METODOS DE LA INTERFAZ
 		 * En este caso tenemos en cuenta que es una cuenta en la que no se añade comision tanto al ingresar como al retirar.
 		 * -validacionIngresar()
 		 * -validacionRetirar()
@@ -76,7 +75,6 @@ public class CuentaSinComision extends Banco implements Movimiento{
 		 * -retirarValidacion()
 		 */
 	
-
 		//realizarIngreso(): agrega el saldo a cuenta y al saldo del banco
 		@Override
 		public void realizarIngreso(double cantidad) {
